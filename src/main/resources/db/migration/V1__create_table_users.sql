@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS users (
     id bigint not null,
     name varchar(255),
-    registrationDate LocalDateTime,
+    registrationDate Date,
     isSatisfied boolean,
     gender varchar(10),
     aged boolean,
     timeOfService bigint,
-    exitForecast LocalDateTime,
+    exitForecast Date,
     primary key(id)
 );

@@ -14,29 +14,19 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    private Long id;
 
-    @NotNull
-    @Size(min = 3, max = 64)
-    public String name;
+    private String name;
 
-    @NotNull
-    @PastOrPresent
-    public LocalDate registrationDate;
+    private LocalDate registrationDate;
 
-    @NotNull
-    public boolean isSatisfied;
+    private boolean isSatisfied;
 
-    public String gender;
+    private String gender;
 
-    @NotNull
-    public boolean aged;
+    private boolean aged;
 
-    @Min(1)
-    @NotNull
-    public BigDecimal timeOfService;
+    private BigDecimal timeOfService;
 
-    @NotNull
-    @FutureOrPresent
-    public LocalDate exitForecast;
+    private LocalDate exitForecast;
 }
