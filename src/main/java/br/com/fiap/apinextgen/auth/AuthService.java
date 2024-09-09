@@ -1,6 +1,6 @@
 package br.com.fiap.apinextgen.auth;
 
-import br.com.fiap.apinextgen.repository.UserRepository;
+import br.com.fiap.apinextgen.user.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

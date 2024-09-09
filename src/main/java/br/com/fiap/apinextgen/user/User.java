@@ -1,4 +1,4 @@
-package br.com.fiap.apinextgen.model;
+package br.com.fiap.apinextgen.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

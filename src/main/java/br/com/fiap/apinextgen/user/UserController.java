@@ -1,9 +1,7 @@
-package br.com.fiap.apinextgen.controller;
+package br.com.fiap.apinextgen.user;
 
-import br.com.fiap.apinextgen.dto.UserRequest;
-import br.com.fiap.apinextgen.dto.UserResponse;
-import br.com.fiap.apinextgen.model.User;
-import br.com.fiap.apinextgen.service.UserService;
+import br.com.fiap.apinextgen.user.dto.UserRequest;
+import br.com.fiap.apinextgen.user.dto.UserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

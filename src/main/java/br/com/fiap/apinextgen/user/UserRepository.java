@@ -1,6 +1,5 @@
-package br.com.fiap.apinextgen.repository;
+package br.com.fiap.apinextgen.user;
 
-import br.com.fiap.apinextgen.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

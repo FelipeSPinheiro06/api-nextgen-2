@@ -1,6 +1,6 @@
-package br.com.fiap.apinextgen.dto;
+package br.com.fiap.apinextgen.user.dto;
 
-import br.com.fiap.apinextgen.model.User;
+import br.com.fiap.apinextgen.user.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
