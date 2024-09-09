@@ -23,6 +23,10 @@ public class User {
 
     private String name;
 
+    private String email;
+
+    private String password;
+
     private LocalDate registrationDate;
 
     private boolean isSatisfied;

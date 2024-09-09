@@ -7,6 +7,8 @@ import java.time.LocalDate;
 
 public record UserRequest(
      String name,
+     String email,
+     String password,
      String gender,
      Boolean aged,
      BigDecimal timeOfService,
@@ -16,6 +18,8 @@ public record UserRequest(
     public User toModel() {
         return User.builder()
                 .name(name)
+                .email(email)
+                .password(password)
                 .registrationDate(LocalDate.now())
                 .gender(gender)
                 .aged(aged)
