@@ -17,9 +17,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<UserResponse> getAllUsers() {
+    public List<UserResponse> getAllUsers(@RequestParam(required = false) String name) {
         return userService
-                    .findAll()
+                    .findByName(name)
                     .stream()
                     .map(UserResponse::fromModel)
                     .toList();

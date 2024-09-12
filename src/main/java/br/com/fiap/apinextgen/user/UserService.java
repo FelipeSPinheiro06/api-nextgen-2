@@ -6,6 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -48,5 +49,9 @@ public class UserService {
     public User verifyExistence(Long id) {
         return userRepository.findById(id)
                             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "não existe usuário com o id informado"));
+    }
+
+    public List<User> findByName(String name) {
+        return userRepository.findByNameContainingIgnoreCase(name);
     }
 }
