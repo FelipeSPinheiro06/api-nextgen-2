@@ -1,5 +1,6 @@
 package br.com.fiap.apinextgen.feedback;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class FeedbackController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Feedback post(@RequestBody Feedback f) {
         return feedbackService.createFeedback(f);
     }
@@ -35,6 +37,7 @@ public class FeedbackController {
     }
 
     @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) {
         feedbackService.deleteFeedback(id);
     }
