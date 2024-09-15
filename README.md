@@ -26,7 +26,7 @@ Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/7AmaUS
 - JDK Instalado: Clique aqui para instalar
 - IDE: Visual Studio Code ou IntelliJ instalado.
 
-### Instalando as extensões necessárias
+## Instalando as extensões necessárias
 
 - Caso você utilize o IntelliJ, não é necessário a instalação das extensões (Vá para o passo 4);
 
