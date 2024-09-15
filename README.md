@@ -14,7 +14,7 @@
 
 ## Saiba mais
 
-- Para saber o essencial do nosso projeto, clique <a src="https://youtu.be/7AmaUS82GLU">nesse vídeo</a> e descubra:
+Para saber o essencial do nosso projeto, clique <a src="https://youtu.be/7AmaUS82GLU">nesse vídeo</a> e descubra:
 1. Objetivo da solução
 2. Arquitetura
 3. Funcionalidades
@@ -24,9 +24,13 @@
 ## Pré-requisitos
 
 - JDK Instalado: Clique aqui para instalar
-- Visual Studio Code instalado.
+- IDE: Visual Studio Code ou IntelliJ instalado.
 
-### Instalando as extensões necessárias
+### Instalando as extensões necessárias, caso necessário
+
+Caso você utilize o IntelliJ, não é necessário a instalação das extensões
+
+Caso você utilize o Visual Studio Code, siga o passo a passo abaixo desde o 1:
 
 1. Vá nas extensões do Visual Studio Code ou digite:
 ```
@@ -38,11 +42,9 @@
 ```
 3. Clique em "Install" ou "Instalar".
 
-<img src="src/images/Spring Boot Extension Picture.png" height="100" title="nome imagem">
-
 <br/>
 
-4. Vá para o documento: "NextgenApplication.java".
+4. Vá para o documento: "ApiNextgenApplication.java".
 
 <br/>
 
