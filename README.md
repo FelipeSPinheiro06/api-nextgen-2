@@ -23,7 +23,7 @@ Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/7AmaUS
 
 ## Pré-requisitos
 
-- JDK Instalado: Clique aqui para instalar
+- JDK Instalado: Clique <a href="https://www.oracle.com/java/technologies/downloads/">aqui</a> para instalar
 - IDE: Visual Studio Code ou IntelliJ instalado.
 
 ## Instalando as extensões necessárias
