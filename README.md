@@ -14,7 +14,7 @@
 
 ## Saiba mais
 
-Para saber o essencial do nosso projeto, clique <a src="https://youtu.be/7AmaUS82GLU">nesse vídeo</a> e descubra:
+Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/7AmaUS82GLU">nesse vídeo</a> e descubra:
 1. Objetivo da solução
 2. Arquitetura
 3. Funcionalidades
