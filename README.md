@@ -28,7 +28,9 @@ Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/7AmaUS
 
 ## Instalando as extensões necessárias
 
-- Caso você utilize o IntelliJ, não é necessário a instalação das extensões (Vá para o passo 4);
+- Caso você utilize o IntelliJ, não é necessário a instalação das extensões (Vá para o passo 4)
+
+<br/>
 
 - Caso você utilize o Visual Studio Code, siga o passo a passo abaixo desde o 1:
 
