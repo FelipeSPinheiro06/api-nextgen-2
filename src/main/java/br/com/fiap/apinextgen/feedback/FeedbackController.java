@@ -1,5 +1,8 @@
 package br.com.fiap.apinextgen.feedback;
 
+import br.com.fiap.apinextgen.ApiNextgenApplication;
+import jakarta.validation.Valid;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +13,11 @@ import java.util.List;
 public class FeedbackController {
 
     private final FeedbackService feedbackService;
+    private final RabbitTemplate rabbitTemplate;
 
-    public FeedbackController(FeedbackService feedbackService) {
+    public FeedbackController(FeedbackService feedbackService, RabbitTemplate rabbitTemplate) {
         this.feedbackService = feedbackService;
+        this.rabbitTemplate = rabbitTemplate;
     }
 
     @GetMapping
@@ -27,7 +32,8 @@ public class FeedbackController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Feedback post(@RequestBody Feedback f) {
+    public Feedback post(@RequestBody @Valid Feedback f) {
+        rabbitTemplate.convertAndSend(ApiNextgenApplication.FEEDBACK_QUEUE, "Novo feedback feito: " + f.getFeedbackDate());
         return feedbackService.createFeedback(f);
     }
 
