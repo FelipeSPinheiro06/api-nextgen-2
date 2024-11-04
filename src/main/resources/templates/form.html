@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nextgen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="container">
+
+<h1 class="title has-text-centered mt-4">Criar Feedback</h1>
+
+<br/>
+<br/>
+
+<form id="feedbackForm">
+    <!-- Campo de Sentimento -->
+    <div class="field">
+        <label class="label" for="feeling">Sentimento</label>
+        <div class="control">
+            <input id="feeling" name="feeling" class="input" type="text" placeholder="Exemplo: Feliz">
+        </div>
+        <p class="help is-danger" id="feelingError"></p>
+    </div>
+
+    <!-- Campo para Data do Feedback -->
+    <div class="field">
+        <label class="label" for="feedbackDate">Data</label>
+        <div class="control">
+            <input id="feedbackDate" name="feedbackDate" class="input" type="date" placeholder="Exemplo: 2024-10-02">
+        </div>
+        <p class="help is-danger" id="feedbackDateError"></p>
+    </div>
+
+    <!-- Campo de Mensagem -->
+    <div class="field">
+        <label class="label" for="description">Descrição</label>
+        <div class="control">
+            <input type="text" id="description" name="description" class="input" placeholder="Exemplo: Ótimo serviço realizado">
+        </div>
+    </div>
+
+    <br/>
+
+    <!-- Botões de Ação -->
+    <a href="/" class="button is-default mb-4">
+        <span class="icon is-small">
+            <i class="fas fa-arrow-left"></i>
+        </span>
+        <span>Cancelar</span>
+    </a>
+
+    <button type="button" class="button is-success mb-4" id="submitFeedback">
+        <span class="icon is-small">
+            <i class="fas fa-check"></i>
+        </span>
+        <span>Salvar Feedback</span>
+    </button>
+</form>
+
+<script>
+    // Função para salvar o feedback
+    document.getElementById("submitFeedback").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const feedbackDateInput = document.getElementById("feedbackDate").value;
+        const [year, month, day] = feedbackDateInput.split("-"); // Desestrutura a data no formato yyyy-MM-dd
+
+        // Converte para o formato dd-MM-yyyy
+        const formattedFeedbackDate = `${day}-${month}-${year}`;
+
+        const feedbackData = {
+            feeling: document.getElementById("feeling").value,
+            feedbackDate: formattedFeedbackDate, // Usa a data formatada
+            description: document.getElementById("description").value
+        };
+
+        fetch("/feedbacks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(feedbackData)
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert("Feedback salvo com sucesso!");
+                } else {
+                    alert("Erro ao salvar feedback.");
+                }
+            })
+            .catch(error => console.error("Erro:", error));
+    });
+</script>
+
+</body>
+</html>

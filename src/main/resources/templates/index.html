@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nextgen</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="container">
+
+    <h1 class="title">Nextgen</h1>
+
+    <div class="is-flex is-flex-direction-row is-justify-content-space-between">
+        <h2 class="is-size-4">Olá, bem-vindo</h2>
+        <a href="/form" class="button is-success mb-4">
+            <span class="icon is-small">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span>Novo Feedback</span>
+        </a>
+    </div>
+
+    <div class="card mt-4" th:each="feedback: ${feedbacks}">
+        <header class="card-header">
+            <p class="card-header-title">Feedback</p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                <div th:text="'Sentimento: ' + ${feedback.feeling}"></div>
+                <div class="mt-5" th:text="'Descrição: ' + ${feedback.description}"></div>
+                <div class="mt-5" th:text="'Data do feedback: ' + ${feedback.feedbackDate}"></div>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a href="#" class="card-footer-item">Edit</a>
+            <a href="#" class="card-footer-item">Delete</a>
+        </footer>
+    </div>
+
+</body>
+</html>
