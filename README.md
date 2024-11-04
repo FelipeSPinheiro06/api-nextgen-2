@@ -14,12 +14,11 @@
 
 ## Saiba mais
 
-Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/7AmaUS82GLU">nesse vídeo</a> e descubra:
-1. Objetivo da solução
+Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/topLTWS2NCU">nesse vídeo</a> e descubra:
+1. Introdução
 2. Arquitetura
-3. Funcionalidades
-4. Dificuldades Encontradas
-5. Próximos passos
+3. Simulação
+4. Conclusão
 
 ## Pré-requisitos
 
