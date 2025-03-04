@@ -30,8 +30,7 @@ Para saber o essencial do nosso projeto, clique <a href="https://youtu.be/topLTW
 3. Simulação
 4. Conclusão
 
-
-### 🎲 Rodando o Back-End
+## 🎲 Rodando o Back-End
 
 - Caso você utilize o IntelliJ, não é necessário a instalação das extensões (Vá para o passo 4)
 
