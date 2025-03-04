@@ -8,7 +8,7 @@
  <a href="#-pré-requisitos">Pré-Requisitos</a> •
  <a href="#-features">Features</a> • 
  <a href="#-saiba-mais">Saiba mais</a> •
- <a href="#-rodando-o-back-end">Saiba mais</a> •
+ <a href="#-rodando-o-back-end">Rodando o Back-end</a> •
  <a href="#️-integrantes">Integrantes</a>
 </p>
 
